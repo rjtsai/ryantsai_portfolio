@@ -1,0 +1,11 @@
+.homeicon-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.homeicon-text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    text-align: center;
+}
