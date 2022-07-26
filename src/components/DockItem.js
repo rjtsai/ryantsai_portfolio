@@ -10,7 +10,7 @@ function DockItem(props) {
     const Toggle = () => setOpenModal(!openModal);
   return (
     <>
-    {openModal && <Modal id={props.id} clickEvent={Toggle}/>}
+    {openModal && <Modal id={props.id} clickEvent={Toggle} title={props.text}/>}
     <div className="dock-item" onClick={Toggle}>
         <IconContext.Provider value={{ size: "2em" }}>
             <FaBeer />

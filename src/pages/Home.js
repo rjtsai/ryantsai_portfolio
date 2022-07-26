@@ -5,7 +5,7 @@ function Home() {
   return (
     <>
         <HomeIcons />
-        <h1> Remodeling in progress :)</h1>    
+        <h1> Remodeling in progress :)</h1>  
     </>
   )
 }

@@ -18,7 +18,6 @@ function Modal(props) {
     };
 
     const _dragEnd = () => {
-        
         setDragging(false);
     };
 
@@ -41,7 +40,7 @@ function Modal(props) {
                 </IconContext.Provider>
             </div>
             <div className="modal-title">
-                Title
+                {props.title}
             </div>
             <div className="modal-subtitle">
                 Subtitle

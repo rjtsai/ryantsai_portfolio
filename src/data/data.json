@@ -1,0 +1,71 @@
+{
+    "projects" : [
+        {
+            "title": "Code Workout",
+            "subtitle": "...",
+            "tools": "Ruby on Rails, Docker",
+            "description": "Allows students to write their own test cases and run them against an instructor solution.",
+            "url": "https://codeworkout.cs.vt.edu/",
+            "img": "images/codeworkout.jpg"
+        },
+        {
+            "title": "ESPN Scraper",
+            "subtitle": "...",
+            "tools": "React.js, Cheerio, Axios",
+            "description": "Aggregate and display stats and news for favorited sports teams.",
+            "url": "https://shport.app",
+            "img": "images/shport.jpg"
+        },
+        {
+            "title": "Theta Tau SLO Website",
+            "subtitle": "...",
+            "tools": "React.js",
+            "description": "Landing page for Theta Tau San Luis Obispo",
+            "url": "https://www.thetatauslo.com/",
+            "img": "images/tt.jpg"
+        },
+        {
+            "title": "File Compression",
+            "subtitle": "...",
+            "tools": "Python",
+            "description": "Compression algorithm using Huffman Encoding.",
+            "url": "N/A",
+            "img": "images/compression.jpg"
+        },
+        {
+            "title": "Machine Learning Report",
+            "subtitle": "...",
+            "tools": "Report",
+            "description": "Report on basic machine learning concepts compiled for a technical writing course.",
+            "url": "N/A",
+            "img": "images/machine_learning_project.jpg"
+        }
+    ],
+
+    "experience" : [
+        {
+            "title": "Instructional Student Assistant",
+            "employer": "California Polytechnic State University, CSSE Department",
+            "time": "March 2022 - Present",
+            "description": "..."
+        },
+        {
+            "title": "Software Engineering Intern",
+            "employer": "Code Workout",
+            "time": "February 2021 - June 2022",
+            "description": "Implemented front-end code to display student progress to course instructors\nDesigned and refactored modules to implement student oriented testing solutions\nPerformed multiple active record migrations in Rails, and back-end schema modifications on an SQL server\nUtilized: Ruby on Rails, Docker, SQL"
+        },
+        {
+            "title": "Fulfillment Associate",
+            "employer": "Amazon",
+            "time": "July 2019 - September 2019",
+            "description": "Managed multiple responsibilities in a fast-paced environment while completing tasks with quality\nAdapted quickly and demonstrated proficiency in 4 different roles \nCommunicated clearly and effectively on warehouse operations status and updates"
+        },
+        {
+            "title": "Machine Learning Intern",
+            "employer": "NEC Laboratories",
+            "time": "August 2018 - September 2018",
+            "description": "Involved in 2 projects pertaining to road traffic optimization and tattoo recognition software\nPromoted a driven and welcoming work environment by organizing weekly bonding events"
+        }
+    ]
+}
