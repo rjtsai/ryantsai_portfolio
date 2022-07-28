@@ -52,3 +52,16 @@
   display: flex;
   margin-left: 20px;
 }
+
+@media (max-width: 1000px) {
+
+  .navbar-timestamp {
+    font-size: 0.6rem;
+  }
+
+  .social-icon {
+    display: flex;
+    margin-left: 5px;
+  }
+
+}

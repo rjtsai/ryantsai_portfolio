@@ -14,7 +14,6 @@ function Navbar() {
       setTime(curr)
     }, 60 * 1000);
   });
-
   let currHour = time.getHours();
   let minute = time.getMinutes();
   let hour = currHour % 12;
