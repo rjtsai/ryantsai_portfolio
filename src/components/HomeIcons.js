@@ -10,9 +10,9 @@ function HomeIcons() {
         <div className="homeicon-container">
           <HomeIconItem text="projects" />
           {/*
-          <HomeIconItem text="experience" />
           <HomeIconItem text="text" />
-          <HomeIconItem text="socials" />
+          <HomeIconItem text="text" />
+          <HomeIconItem text="text" />
           */}
         </div>
     </>

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Navbar.css';
+import { IconContext } from 'react-icons';
+import {TiSocialLinkedin, TiSocialInstagram, TiSocialFacebookCircular, TiSocialGithub, TiSocialFacebook} from 'react-icons/ti';
 
 function Navbar() {
   const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -32,6 +34,30 @@ function Navbar() {
               <p className="navbar-timestamp">
                 {today}
               </p>
+              <div className='social-icons'>
+                <IconContext.Provider value={{size: '1.5em', color: 'black'}} >
+                  <div className='social-icon'>
+                    <a target='_blank' href='https://www.linkedin.com/in/ryanj-tsai/' aria-label='LinkedIn'>
+                    <TiSocialLinkedin />
+                    </a>
+                  </div>
+                  <a target='_blank' href='https://github.com/rtblast70' aria-label='Github'>
+                  <div className='social-icon'>
+                    <TiSocialGithub />
+                  </div>
+                  </a>
+                  <a target='_blank' href='https://www.instagram.com/ryantsaii/' aria-label='Instagram'>
+                  <div className='social-icon'>
+                    <TiSocialInstagram />
+                  </div>
+                  </a>
+                  <a target='_blank' href='https://www.facebook.com/ryan.tsai.792' aria-label='Facebook'>
+                  <div className='social-icon'>
+                    <TiSocialFacebook />
+                  </div>
+                  </a>
+                </IconContext.Provider>
+              </div>
             </div>
         </nav>
     </>

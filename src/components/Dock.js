@@ -7,9 +7,9 @@ function Dock() {
   return (
     <>
         <div className="dock-container">
-            <DockItem text="about" />
-            <DockItem text="text" />
-            <DockItem text="gallery" />
+            <DockItem type="about" />
+            <DockItem type="text" />
+            <DockItem type="gallery" />
         </div>
     </>
   )

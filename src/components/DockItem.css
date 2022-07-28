@@ -3,5 +3,12 @@
 }
 
 .dock-item > p {
+    display: flex;
+    justify-content: center;
     margin-top: auto;
+}
+
+.dock-icon {
+    display: flex;
+    justify-content: center;
 }

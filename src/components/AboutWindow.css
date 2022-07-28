@@ -1,0 +1,38 @@
+.modal-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.modal{
+    position: absolute;
+    background-color: white;
+    width: calc(15% + 60vw);
+    height: 50vh;
+    border-radius: 20px;
+}
+
+.modal-subtitle {
+    position: relative;
+    text-align: left;
+}
+
+.handlebar {
+    border-bottom: 1.5px solid #cacaca;
+    padding-bottom: 20px;
+}
+
+.close {
+    display: inline-block;
+    align-content: center;
+    top: 50%;
+    bottom: auto;
+}
+
+.nav-buttons {
+    margin-left: 5%;
+    display: inline-block;
+}
