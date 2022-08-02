@@ -1,5 +1,6 @@
 .dock-item {
     margin: 10px auto;
+    cursor: pointer;
 }
 
 .dock-item > p {
@@ -12,3 +13,8 @@
     display: flex;
     justify-content: center;
 }
+
+.dock-item:hover {
+    transform: scale(1.3) translate(0, -1vh);
+}
+

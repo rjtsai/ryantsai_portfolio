@@ -10,10 +10,11 @@
 .modal{
     position: absolute;
     background-color: white;
-    width: calc(15% + 60vw);
-    height: 50vh;
+    width: calc(15% + 40vw);
     border-radius: 20px;
+    height: auto;
 }
+
 
 .modal-subtitle {
     position: relative;
@@ -22,17 +23,25 @@
 
 .handlebar {
     border-bottom: 1.5px solid #cacaca;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
 }
 
 .close {
     display: inline-block;
     align-content: center;
-    top: 50%;
-    bottom: auto;
+    margin-top: -10%;
 }
 
 .nav-buttons {
     margin-left: 5%;
     display: inline-block;
+}
+
+img {
+    width: 100%;
+}
+
+.modal-content {
+    max-height: 70vh;
+    overflow-y: scroll;
 }

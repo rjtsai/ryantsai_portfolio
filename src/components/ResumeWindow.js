@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import './AboutWindow.css';
+import './ResumeWindow.css';
 import { IconContext } from 'react-icons';
 import { AiFillCloseCircle, AiOutlineCloseCircle } from "react-icons/ai";
+import { Document, Page } from 'react-pdf';
+import Resume from '../GalleryImages/resume.jpg';
 
-function AboutWindow(props) {
+function ResumeWindow(props) {
     const [hover, setHover] = useState(false);
     const [dX, moveX] = useState(0);
     const [dY, moveY] = useState(0);
@@ -45,15 +47,7 @@ function AboutWindow(props) {
             </div>
             </div>
             <div className='modal-content'>
-                <div className='modal-title'>
-                    <h1>Welcome to my site!</h1>
-                </div>
-                <div className='modal-body'>
-                    <p>I'm in the process of rebuilding this website, so excuse the mess. <br /><br />
-                        Feel free to poke around! <br /><br />
-                        
-                    </p>
-                </div>
+                <img src={Resume} />
             </div>
             
             
@@ -63,4 +57,4 @@ function AboutWindow(props) {
   )
 }
 
-export default AboutWindow
+export default ResumeWindow
