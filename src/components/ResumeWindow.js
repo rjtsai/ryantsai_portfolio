@@ -37,15 +37,15 @@ function ResumeWindow(props) {
     <>
       <div className="modal-background">
         <div
-          className="modal"
+          className="resume-modal"
           style={styles}
           onMouseDown={_dragStart}
           onMouseMove={_dragging}
           onMouseUp={_dragEnd}
         >
-          <div className="handlebar">
+          <div className="resume-handlebar">
             <div
-              className="close"
+              className="resume-close"
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
               onClick={props.clickEvent}
@@ -56,7 +56,7 @@ function ResumeWindow(props) {
             </div>
           </div>
           <div
-            className="modal-content"
+            className="resume-content"
             onMouseDown={(e) => e.stopPropagation()}
           >
             <img src={Resume} />

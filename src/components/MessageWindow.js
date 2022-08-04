@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./MessageWindow.css";
 import { IconContext } from "react-icons";
 import { AiFillCloseCircle, AiOutlineCloseCircle } from "react-icons/ai";
-import toast, { Toaster } from "react-hot-toast";
+import {EmailForm} from './EmailForm';
 
 function AboutWindow(props) {
   const [hover, setHover] = useState(false);
@@ -32,10 +32,6 @@ function AboutWindow(props) {
     }
   };
 
-  const handleSubmit = () => {
-    toast("Sent!");
-  };
-
   return (
     <>
       <div className="modal-background">
@@ -46,9 +42,9 @@ function AboutWindow(props) {
           onMouseMove={_dragging}
           onMouseUp={_dragEnd}
         >
-          <div className="handlebar">
+          <div className="message-handlebar">
             <div
-              className="close"
+              className="message-close"
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
               onClick={props.clickEvent}
@@ -58,39 +54,8 @@ function AboutWindow(props) {
               </IconContext.Provider>
             </div>
           </div>
-          <p className="message-header">send me a message! (testing)</p>
-          <div
-            className="modal-content"
-            onMouseDown={(e) => e.stopPropagation()}
-          >
-            <div className="input-wrap">
-              <div className="single-input">
-                <input type="text" placeholder="subject:" />
-              </div>
-              <div className="single-input">
-                <input type="email" placeholder="email address:" />
-              </div>
-              <div className="multi-input">
-                <textarea type="paragraph" placeholder="message:" />
-              </div>
-            </div>
-            <div className="button-wrap">
-              <button className="send-button" onClick={handleSubmit}>
-                send
-              </button>
-              <Toaster
-                toastOptions={{
-                  className: "",
-                  style: {
-                    border: "1px solid #713200",
-                    padding: "9px",
-                    marginTop: "2%",
-                    color: "#713200",
-                  },
-                }}
-              />
-            </div>
-          </div>
+          <p className="message-header">send me a message!</p>
+            <EmailForm />
         </div>
       </div>
     </>

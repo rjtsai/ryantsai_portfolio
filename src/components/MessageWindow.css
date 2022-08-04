@@ -11,20 +11,24 @@
     position: absolute;
     top: 7%;
     background-color: white;
-    width: calc(15% + 60vw);
+    width: calc(15% + 40vw);
     border-radius: 20px;
-    padding: 2%;
 }
 
-.handlebar {
+.message-handlebar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     border-bottom: 1.5px solid #cacaca;
-    padding-bottom: 20px;
+    padding: 0.7%;
+    border-radius: 10px 10px 0 0;
+    background: #fffbf5;
+    opacity: 0.8;
 }
 
-.close {
-    display: inline-block;
+.message-close {
+    display: flex;
     align-content: center;
-    top: 50%;
     bottom: auto;
 }
 
@@ -34,22 +38,27 @@
     margin-bottom: 0%;
 }
 
-.modal-content {
+.message-content {
     display: flex;
     flex-direction: column;
-    height: 70vh;
+    padding: 2% 2% 7% 2%;
 }
 
 .input-wrap {
     display: flex;
     flex-direction: column;
-    flex-grow: 2;
+    flex-grow: 3;
+    height: 70%;
     margin-top: 1%;
 }
 
 .button-wrap {  
     display: flex;
-    justify-content: right;
+    flex-grow: 1;
+    position: absolute;
+    padding: 2%;
+    right: 0;
+    bottom: 0;
 }
 
 .single-input {
@@ -60,28 +69,27 @@
 .single-input > input {
     height: 95%;
     width: 70%;
+    
 }
 
 .multi-input {
     display: flex;
-    flex-grow: 2;
-    
-    
+    height: 40vh;
+    flex-grow: 3;
 }
 
-.multi-input > textarea {
+textarea {
     width: 100%;
-    height: 95%;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
     border-radius: 4px;
     background-color: #f8f8f8;
     resize: none;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
-button {
-    margin-right: 2%;
+.button-wrap > input {
+    display: flex;
+    
 }
 
 @media (max-width: 1000px) {
@@ -93,6 +101,14 @@ button {
     }
     .multi-input > textarea {
         height: 90%;
+    }
+
+    .button-wrap {
+        right: 4%;
+    }
+
+    .message-modal {
+        width: 90vw;
     }
     
 }
