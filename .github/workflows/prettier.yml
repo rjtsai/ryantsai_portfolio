@@ -1,6 +1,3 @@
-- name: Prettier Action
-  uses: creyD/prettier_action@v4.2
-
 name: Continuous Integration
 
 # This action works with pull requests and pushes

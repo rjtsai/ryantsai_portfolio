@@ -8,7 +8,7 @@ function Dock() {
     <>
         <div className="dock-container">
             <DockItem type="about" />
-            <DockItem type="text" />
+            <DockItem type="message" />
             <DockItem type="resume" />
         </div>
     </>

@@ -46,7 +46,7 @@ function ResumeWindow(props) {
                 </IconContext.Provider>
             </div>
             </div>
-            <div className='modal-content'>
+            <div className='modal-content' onMouseDown={(e) => e.stopPropagation()}>
                 <img src={Resume} />
             </div>
             

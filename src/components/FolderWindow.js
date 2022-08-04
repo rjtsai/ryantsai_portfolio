@@ -48,27 +48,28 @@ function FolderWindow(props) {
       <>
       
       <div className="modal-background" >
-        <div className="modal" style={styles} onMouseDown={_dragStart} onMouseMove={_dragging} onMouseUp={_dragEnd}>
-            <div className="handlebar">
-            <div className="close" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} onClick={props.clickEvent}>
+        <div className="folder-modal" style={styles}>
+            <div className="folder-handlebar" onMouseDown={_dragStart} onMouseMove={_dragging} onMouseUp={_dragEnd}>
+            <div className="folder-close" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} onClick={props.clickEvent}>
                 <IconContext.Provider value={{ size: "1.3em" }} >
                     {hover? <AiFillCloseCircle /> : <AiOutlineCloseCircle />}
                 </IconContext.Provider>
             </div>
-            <div className="nav-buttons" onClick={() => setDisplay({open: false, id: -1})}>
+            <div className="folder-nav-buttons" onClick={() => setDisplay({open: false, id: -1})}>
                 <IconContext.Provider value={{ size: "1.4em", color: `${display.open? 'black' : 'silver'}`}} >
                     <IoIosArrowBack /> 
                 </IconContext.Provider>
             </div>
-            <div className="nav-buttons" >
+            <div className="folder-nav-buttons" >
                 <IconContext.Provider value={{ size: "1.4em", color: `silver`}} >
                     <IoIosArrowForward /> 
                 </IconContext.Provider>
             </div>
             
             </div>
-            {display.open? <FolderWindowInfo info={data[display.id]}>{display.id}</FolderWindowInfo> : <Cards title={props.title} data={props.data} toggleDisplay={toggleDisplay} />}
-            
+            <div className='folder-contents'>
+                {display.open? <FolderWindowInfo info={data[display.id]}>{display.id}</FolderWindowInfo> : <Cards title={props.title} data={props.data} toggleDisplay={toggleDisplay} />}
+            </div>
             
         </div>
         </div>

@@ -5,9 +5,11 @@ import { IconContext } from 'react-icons';
 import { FaBeer } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { GrDocumentPdf } from "react-icons/gr";
+import { TiMessages } from "react-icons/ti";
 import Modal from './Modal';
 import AboutWindow from './AboutWindow';
 import ResumeWindow from './ResumeWindow';
+import MessageWindow from './MessageWindow';
 
 function DockItem(props) {
     const [openModal, setOpenModal] = useState(false);
@@ -17,6 +19,8 @@ function DockItem(props) {
         return (<CgProfile />);
       } else if (props.type === "resume") {
         return (<GrDocumentPdf />);
+      } else if (props.type === "message") {
+        return (<TiMessages />);
       } else {
         return (<FaBeer />);
       }
@@ -27,6 +31,8 @@ function DockItem(props) {
         return (<AboutWindow clickEvent={Toggle} />);
       } else if(props.type == "resume") {
         return (<ResumeWindow clickEvent={Toggle} />);
+      } else if(props.type === "message") {
+        return (<MessageWindow clickEvent={Toggle} />)
       } else {
         console.warn("default modal activated");
         return (<Modal id={props.id} clickEvent={Toggle} title={props.type}/>)

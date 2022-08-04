@@ -17,9 +17,8 @@
 .navbar-left {
   display: flex;
   margin-left: 5%;
-  align-self: center;
+  align-items: center;
   justify-content: center;
-  align-self: center;
 }
 
 .navbar-right {
@@ -36,6 +35,7 @@
   font-size: 1.5rem;
   display: flex;
   white-space: nowrap;
+  padding-bottom: 21%;
 }
 
 .navbar-timestamp {

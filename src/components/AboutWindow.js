@@ -36,19 +36,19 @@ function AboutWindow(props) {
       <>
       
       <div className="modal-background" >
-        <div className="modal" style={styles} onMouseDown={_dragStart} onMouseMove={_dragging} onMouseUp={_dragEnd}>
-            <div className="handlebar">
-            <div className="close" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} onClick={props.clickEvent}>
+        <div className="about-modal" style={styles} onMouseDown={_dragStart} onMouseMove={_dragging} onMouseUp={_dragEnd}>
+            <div className="about-handlebar">
+            <div className="about-close" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} onClick={props.clickEvent}>
                 <IconContext.Provider value={{ size: "1.3em" }} >
                     {hover? <AiFillCloseCircle /> : <AiOutlineCloseCircle />}
                 </IconContext.Provider>
             </div>
             </div>
-            <div className='modal-content'>
-                <div className='modal-title'>
+            <div className='about-contents' onMouseDown={(e) => e.stopPropagation()}>
+                <div className='about-title'>
                     <h1>Welcome to my site!</h1>
                 </div>
-                <div className='modal-body'>
+                <div className='about-body'>
                     <p>I'm in the process of rebuilding this website, so excuse the mess. <br /><br />
                         Feel free to poke around! <br /><br />
                         
