@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import "./MessageWindow.css";
 import { IconContext } from "react-icons";
 import { AiFillCloseCircle, AiOutlineCloseCircle } from "react-icons/ai";
-import {EmailForm} from './EmailForm';
+import { EmailForm } from "./EmailForm";
 
 function AboutWindow(props) {
   const [hover, setHover] = useState(false);
@@ -55,7 +55,7 @@ function AboutWindow(props) {
             </div>
           </div>
           <p className="message-header">send me a message!</p>
-            <EmailForm />
+          <EmailForm />
         </div>
       </div>
     </>
