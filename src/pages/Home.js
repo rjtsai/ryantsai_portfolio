@@ -1,12 +1,12 @@
-import React from 'react';
-import HomeIcons from '../components/HomeIcons';
+import React from "react";
+import HomeIcons from "../components/HomeIcons";
 
 function Home() {
   return (
     <>
-        <HomeIcons />
+      <HomeIcons />
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;
