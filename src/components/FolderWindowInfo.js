@@ -2,14 +2,17 @@ import React from "react";
 import "./FolderWindowInfo.css";
 
 function FolderWindowInfo(props) {
-
   const generateLink = () => {
-    if(props.info.url !== 'N/A') {
-      return (<a className="content-url" target="_blank" href={props.info.url}>{props.info.url} </a>);
+    if (props.info.url !== "N/A") {
+      return (
+        <a className="content-url" target="_blank" href={props.info.url}>
+          {props.info.url}{" "}
+        </a>
+      );
     } else {
-      return (<a className="content-url">{props.info.url} </a>);
+      return <a className="content-url">{props.info.url} </a>;
     }
-  }
+  };
 
   return (
     <>
@@ -22,7 +25,7 @@ function FolderWindowInfo(props) {
           <p className="content-description">{props.info.description}</p>
           <p className="content-tools">Tools: {props.info.tools}</p>
           <p className="content-description">
-            Project link: <br/>
+            Project link: <br />
             {generateLink()}
           </p>
         </div>
