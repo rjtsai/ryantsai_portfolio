@@ -22,7 +22,7 @@ function DockItem(props) {
       return <GrDocumentPdf />;
     } else if (props.type === "message") {
       return <TiMessages />;
-    } else if (props.type === 'gallery') {
+    } else if (props.type === "gallery") {
       return <GrGallery />;
     } else {
       return <FaBeer />;

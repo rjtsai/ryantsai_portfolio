@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./GalleryWindow.css";
 import { IconContext } from "react-icons";
 import { AiFillCloseCircle, AiOutlineCloseCircle } from "react-icons/ai";
-import { IoIosConstruct } from 'react-icons/io';
+import { IoIosConstruct } from "react-icons/io";
 
 function GalleryWindow(props) {
   const [hover, setHover] = useState(false);
@@ -52,7 +52,7 @@ function GalleryWindow(props) {
               </IconContext.Provider>
             </div>
           </div>
-          <div className='gallery-content'>
+          <div className="gallery-content">
             <IoIosConstruct />
           </div>
         </div>

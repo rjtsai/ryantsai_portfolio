@@ -35,13 +35,13 @@ function AboutWindow(props) {
   return (
     <>
       <div className="modal-background">
-        <div
-          className="message-modal"
-          style={styles}
-        >
-          <div className="message-handlebar" onMouseDown={_dragStart}
-          onMouseMove={_dragging}
-          onMouseUp={_dragEnd}>
+        <div className="message-modal" style={styles}>
+          <div
+            className="message-handlebar"
+            onMouseDown={_dragStart}
+            onMouseMove={_dragging}
+            onMouseUp={_dragEnd}
+          >
             <div
               className="message-close"
               onMouseEnter={() => setHover(true)}
