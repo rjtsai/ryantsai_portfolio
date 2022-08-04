@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./GalleryWindow.css";
 import { IconContext } from "react-icons";
 import { AiFillCloseCircle, AiOutlineCloseCircle } from "react-icons/ai";
-import PhotoGallery from "./PhotoGallery";
+import { IoIosConstruct } from 'react-icons/io';
 
 function GalleryWindow(props) {
   const [hover, setHover] = useState(false);
@@ -34,24 +34,27 @@ function GalleryWindow(props) {
     <>
       <div className="modal-background">
         <div
-          className="modal"
+          className="gallery-modal"
           style={styles}
           onMouseDown={_dragStart}
           onMouseMove={_dragging}
           onMouseUp={_dragEnd}
         >
-          <div
-            className="close"
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
-            onClick={props.clickEvent}
-          >
-            <IconContext.Provider value={{ size: "1.8em" }}>
-              {hover ? <AiFillCloseCircle /> : <AiOutlineCloseCircle />}
-            </IconContext.Provider>
+          <div className="gallery-handlebar">
+            <div
+              className="gallery-close"
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
+              onClick={props.clickEvent}
+            >
+              <IconContext.Provider value={{ size: "1.3em" }}>
+                {hover ? <AiFillCloseCircle /> : <AiOutlineCloseCircle />}
+              </IconContext.Provider>
+            </div>
           </div>
-
-          <PhotoGallery />
+          <div className='gallery-content'>
+            <IoIosConstruct />
+          </div>
         </div>
       </div>
     </>

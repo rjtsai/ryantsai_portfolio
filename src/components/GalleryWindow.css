@@ -4,32 +4,111 @@
     bottom: 0;
     left: 0;
     right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 10;
 }
 
-.modal{
+.gallery-modal{
     position: absolute;
+    top: 7%;
     background-color: white;
-    width: calc(15% + 60vw);
-    height: auto;
-    padding: 2rem;
+    width: calc(15% + 40vw);
     border-radius: 20px;
 }
 
-.modal-title {
-    position: relative;
-    border-bottom: 1px solid #dddddd;
-    text-align: center;
+.gallery-handlebar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1.5px solid #cacaca;
+    padding: 0.7%;
+    border-radius: 10px 10px 0 0;
+    background: #fffbf5;
+    opacity: 0.8;
 }
 
-.modal-subtitle {
-    position: relative;
-    text-align: left;
+.gallery-close {
+    display: flex;
+    align-content: center;
+    bottom: auto;
 }
 
-.close {
-    display: inline-block;
+.gallery-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0%;
+}
+
+.gallery-content {
+    display: flex;
+    flex-direction: column;
+    padding: 2% 2% 7% 2%;
+}
+
+.input-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 3;
+    height: 70%;
+    margin-top: 1%;
+}
+
+.button-wrap {  
+    display: flex;
+    flex-grow: 1;
+    position: absolute;
+    padding: 2%;
+    right: 0;
+    bottom: 0;
+}
+
+.single-input {
+    display: flex;
+    padding-bottom: 1%;
+}
+
+.single-input > input {
+    height: 95%;
+    width: 70%;
+    
+}
+
+.multi-input {
+    display: flex;
+    height: 40vh;
+    flex-grow: 3;
+}
+
+textarea {
+    width: 100%;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.button-wrap > input {
+    display: flex;
+    
+}
+
+@media (max-width: 1000px) {
+    .single-input {
+        padding-bottom: 7%;
+    }
+    .single-input > input {
+        width: 100%;
+    }
+    .multi-input > textarea {
+        height: 90%;
+    }
+
+    .button-wrap {
+        right: 4%;
+    }
+
+    .gallery-modal {
+        width: 90vw;
+    }
+    
 }
