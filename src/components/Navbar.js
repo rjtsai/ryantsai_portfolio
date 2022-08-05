@@ -25,17 +25,19 @@ function Navbar() {
     "Dec",
   ];
   const day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  const curr = new Date();
 
-  const [time, setTime] = useState(curr);
-  /*useEffect(() => {
-    setInterval(() => {
-      setTime(curr)
-    }, 60 * 1000);
-  });*/
+  const [time, setTime] = useState(new Date());
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTime(new Date());
+    }, 1000);
+  });
+
   let currHour = time.getHours();
   let minute = time.getMinutes();
   let hour = currHour % 12;
+  let seconds = time.getSeconds();
 
   if (hour == 0) {
     hour = 12;
