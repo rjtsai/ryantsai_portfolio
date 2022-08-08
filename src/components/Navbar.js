@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import { IconContext } from "react-icons";
+import { FaCaretLeft, FaCaretDown } from 'react-icons/fa';
 import {
   TiSocialLinkedin,
   TiSocialInstagram,
@@ -8,6 +9,7 @@ import {
   TiSocialGithub,
   TiSocialFacebook,
 } from "react-icons/ti";
+import NavbarMenu from "./NavbarMenu";
 
 function Navbar() {
   const month = [
@@ -27,6 +29,11 @@ function Navbar() {
   const day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   const [time, setTime] = useState(new Date());
+  const [dropdown, setDropdown] = useState(false);
+
+  const handleDropdown = () => {
+    setDropdown(!dropdown);
+  }
 
   useEffect(() => {
     setTimeout(() => {
@@ -51,11 +58,18 @@ function Navbar() {
                      ${currHour >= 12 ? "PM" : "AM"}`;
   return (
     <>
+    {dropdown? <NavbarMenu clickEvent={handleDropdown}/> : null}
       <nav className="navbar">
         <div className="navbar-container">
-          <div className="navbar-left">
+          <div className="navbar-left" onClick={handleDropdown}>
             <h1 className="navbar-name">Ryan Tsai</h1>
+            <div className='navbar-dropdown' >
+              <IconContext.Provider value={{}}>
+                {dropdown? <FaCaretDown /> : <FaCaretLeft />}
+              </IconContext.Provider>
+            </div>
           </div>
+          
           <div className="navbar-right">
             <div className="social-icons">
               <IconContext.Provider value={{ size: "1.5em", color: "black" }}>

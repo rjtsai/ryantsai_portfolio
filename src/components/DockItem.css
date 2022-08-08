@@ -1,6 +1,7 @@
 .dock-item {
     margin: 10px auto;
     cursor: pointer;
+    user-select: none;
 }
 
 .dock-item > p {
