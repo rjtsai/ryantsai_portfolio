@@ -7,7 +7,7 @@
     z-index: 10;
 }
 
-.aboutsite-modal{
+.preferences-modal{
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -17,7 +17,7 @@
     border-radius: 20px;
 }
 
-.aboutsite-handlebar {
+.preferences-handlebar {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -28,28 +28,35 @@
     opacity: 0.8;
 }
 
-.aboutsite-close {
+.preferences-close {
     display: flex;
     align-content: center;
     bottom: auto;
 }
 
-.aboutsite-contents {
+.preferences-selector {
+    display: flex;
+    height: 10%;
+    margin-top: 1%;
+    justify-content: center;
+}
+
+.preferences-contents {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     height: 65vh;
     overflow-y: scroll;
-    padding: 5%;
+    padding: 2%;
 }
 
-.aboutsite-header {
+.preferences-header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.aboutsite-title {
+.preferences-title {
     justify-content: center;
     user-select: none;
 }
@@ -60,7 +67,7 @@
     
 }
 
-.aboutsite-icon {
+.preferences-icon {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -82,18 +89,18 @@
 
 }
 
-.aboutsite-body {
+.preferences-body {
     display: flex;
     padding: 2%;
 }
 
 @media (max-width: 1000px) {
-    .aboutsite-modal {
+    .preferences-modal {
         width: 90%;
         height: 50%;
     }
 
-    .aboutsite-close {
+    .preferences-close {
         margin-left: 4%;
     }
     

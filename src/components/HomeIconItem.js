@@ -10,7 +10,6 @@ function HomeIconItem(props) {
   const [hover, setHover] = useState(false);
   const [openModal, setOpenModal] = useState(false);
   const Toggle = () => setOpenModal(!openModal);
-  let category = props.text;
   var data = Data;
 
   if (props.text === "projects") {

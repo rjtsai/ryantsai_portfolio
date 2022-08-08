@@ -6,10 +6,10 @@ function Dock() {
   return (
     <>
       <div className="dock-container">
-        <DockItem type="about" />
+        <DockItem type="profile" />
         <DockItem type="message" />
         <DockItem type="resume" />
-        <DockItem type="gallery" />
+        <DockItem type="preferences" />
       </div>
     </>
   );
