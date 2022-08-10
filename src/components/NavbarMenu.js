@@ -16,10 +16,7 @@ function NavbarMenu(props) {
   };
 
   const activateWindow = () => {
-    if (window.type === "aboutsite") {
-      console.warn("aboutsite");
-      return <SettingsWindow clickEvent={toggleWindow} />;
-    } else if (window.type === "profile") {
+    if (window.type === "profile") {
       return <AboutWindow clickEvent={toggleWindow} />;
     } else if (window.type === "projects") {
       return <FolderWindow clickEvent={toggleWindow} />;
@@ -43,12 +40,6 @@ function NavbarMenu(props) {
         }
       >
         <ul className="dropdown-list">
-          <li
-            className="dropdown-item"
-            onClick={() => toggleWindow("aboutsite")}
-          >
-            about this website
-          </li>
           <li className="dropdown-item" onClick={() => toggleWindow("profile")}>
             profile
           </li>

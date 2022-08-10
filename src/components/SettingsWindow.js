@@ -113,6 +113,7 @@ function SettingsWindow(props) {
         </div>
       );
     }
+  }
 
     return (
       <>
@@ -142,32 +143,17 @@ function SettingsWindow(props) {
                 value="site info"
                 onClick={() => changeContent("info")}
               />
-
               <input
                 type="button"
                 value="styles"
                 onClick={() => changeContent("styles")}
               />
             </div>
+            {displayContents(content)}
           </div>
-          <div className="preferences-selector">
-            <input
-              type="button"
-              value="site info"
-              onClick={() => changeContent("info")}
-            />
-
-            <input
-              type="button"
-              value="styles"
-              onClick={() => changeContent("styles")}
-            />
-          </div>
-          {displayContents(content)}
         </div>
       </>
     );
-  };
 }
 
 export default SettingsWindow;

@@ -48,6 +48,7 @@
     height: 65vh;
     overflow-y: scroll;
     padding: 2%;
+    padding-top: 0;
 }
 
 .settings-header {
