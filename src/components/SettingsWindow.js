@@ -113,47 +113,47 @@ function SettingsWindow(props) {
         </div>
       );
     }
-  }
+  };
 
-    return (
-      <>
-        <div className="modal-background">
-          <div
-            className="settings-modal"
-            style={styles}
-            onMouseDown={_dragStart}
-            onMouseMove={_dragging}
-            onMouseUp={_dragEnd}
-          >
-            <div className="settings-handlebar">
-              <div
-                className="settings-close"
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
-                onClick={props.clickEvent}
-              >
-                <IconContext.Provider value={{ size: "1.3em" }}>
-                  {hover ? <AiFillCloseCircle /> : <AiOutlineCloseCircle />}
-                </IconContext.Provider>
-              </div>
+  return (
+    <>
+      <div className="modal-background">
+        <div
+          className="settings-modal"
+          style={styles}
+          onMouseDown={_dragStart}
+          onMouseMove={_dragging}
+          onMouseUp={_dragEnd}
+        >
+          <div className="settings-handlebar">
+            <div
+              className="settings-close"
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
+              onClick={props.clickEvent}
+            >
+              <IconContext.Provider value={{ size: "1.3em" }}>
+                {hover ? <AiFillCloseCircle /> : <AiOutlineCloseCircle />}
+              </IconContext.Provider>
             </div>
-            <div className="settings-selector">
-              <input
-                type="button"
-                value="site info"
-                onClick={() => changeContent("info")}
-              />
-              <input
-                type="button"
-                value="styles"
-                onClick={() => changeContent("styles")}
-              />
-            </div>
-            {displayContents(content)}
           </div>
+          <div className="settings-selector">
+            <input
+              type="button"
+              value="site info"
+              onClick={() => changeContent("info")}
+            />
+            <input
+              type="button"
+              value="styles"
+              onClick={() => changeContent("styles")}
+            />
+          </div>
+          {displayContents(content)}
         </div>
-      </>
-    );
+      </div>
+    </>
+  );
 }
 
 export default SettingsWindow;
