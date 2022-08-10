@@ -1,36 +1,42 @@
-import React, { useState } from 'react';
-import './SettingsWindow.css';
-import { IconContext } from 'react-icons';
-import { AiFillCloseCircle, AiOutlineCloseCircle } from 'react-icons/ai';
-import { IoLogoAmplify, IoLogoGithub, IoLogoReact,  IoLogoHtml5, IoLogoCss3, } from 'react-icons/io5';
-import { ImGit } from 'react-icons/im';
+import React, { useState } from "react";
+import "./SettingsWindow.css";
+import { IconContext } from "react-icons";
+import { AiFillCloseCircle, AiOutlineCloseCircle } from "react-icons/ai";
+import {
+  IoLogoAmplify,
+  IoLogoGithub,
+  IoLogoReact,
+  IoLogoHtml5,
+  IoLogoCss3,
+} from "react-icons/io5";
+import { ImGit } from "react-icons/im";
 
 function SettingsWindow(props) {
-    const [hover, setHover] = useState(false);
-    const [dX, moveX] = useState(0);
-    const [dY, moveY] = useState(0);
-    const [dragging, setDragging] = useState(false);
-    const [styles, setStyles] = useState({});
-    const [content, setContent] = useState('info');
-  
-    const _dragStart = (e) => {
-      moveX(e.screenX - e.currentTarget.getBoundingClientRect().left);
-      moveY(e.screenY - e.currentTarget.getBoundingClientRect().top);
-      setDragging(true);
-    };
-  
-    const _dragEnd = () => {
-      setDragging(false);
-    };
-  
-    const _dragging = (e) => {
-      if (dragging) {
-        var left = e.screenX - dX;
-        var top = e.screenY - dY;
-  
-        setStyles({ left: left, top: top });
-      }
-    };
+  const [hover, setHover] = useState(false);
+  const [dX, moveX] = useState(0);
+  const [dY, moveY] = useState(0);
+  const [dragging, setDragging] = useState(false);
+  const [styles, setStyles] = useState({});
+  const [content, setContent] = useState("info");
+
+  const _dragStart = (e) => {
+    moveX(e.screenX - e.currentTarget.getBoundingClientRect().left);
+    moveY(e.screenY - e.currentTarget.getBoundingClientRect().top);
+    setDragging(true);
+  };
+
+  const _dragEnd = () => {
+    setDragging(false);
+  };
+
+  const _dragging = (e) => {
+    if (dragging) {
+      var left = e.screenX - dX;
+      var top = e.screenY - dY;
+
+      setStyles({ left: left, top: top });
+    }
+  };
 
   const _dragStart = (e) => {
     moveX(e.screenX - e.currentTarget.getBoundingClientRect().left);
@@ -59,75 +65,74 @@ function SettingsWindow(props) {
     if (content === "info") {
       return (
         <div
-              className="settings-contents"
-              onMouseDown={(e) => e.stopPropagation()}
-            >
-      <div className="settings-header">
-      <h1 className='settings-title'>about this website</h1>
-      <div className='icon-wrapper'>
-          <IconContext.Provider value={{size: '2em'}}>
-              <div className='settings-icon'>
-                  <div className='icon-icon'>
-                  <IoLogoAmplify />
+          className="settings-contents"
+          onMouseDown={(e) => e.stopPropagation()}
+        >
+          <div className="settings-header">
+            <h1 className="settings-title">about this website</h1>
+            <div className="icon-wrapper">
+              <IconContext.Provider value={{ size: "2em" }}>
+                <div className="settings-icon">
+                  <div className="icon-icon">
+                    <IoLogoAmplify />
                   </div>
-                  <p className='icon-title'> aws amplify </p>
-              </div>
-              <div className='settings-icon'>
-                  <div className='icon-icon'>
-                  <ImGit />
+                  <p className="icon-title"> aws amplify </p>
+                </div>
+                <div className="settings-icon">
+                  <div className="icon-icon">
+                    <ImGit />
                   </div>
-                  <p className='icon-title'> git </p>
-              </div>
-              <div className='settings-icon'>
-                  <div className='icon-icon'>
-                  <IoLogoReact />
+                  <p className="icon-title"> git </p>
+                </div>
+                <div className="settings-icon">
+                  <div className="icon-icon">
+                    <IoLogoReact />
                   </div>
-                  <p className='icon-title'> react.js </p>
-              </div>
-              <div className='settings-icon'>
-                  <div className='icon-icon'>
-                  <IoLogoHtml5 />
+                  <p className="icon-title"> react.js </p>
+                </div>
+                <div className="settings-icon">
+                  <div className="icon-icon">
+                    <IoLogoHtml5 />
                   </div>
-                  <p className='icon-title'> html5 </p>
-              </div>
-              <div className='settings-icon'>
-                  <div className='icon-icon'>
-                  <IoLogoCss3 />
+                  <p className="icon-title"> html5 </p>
+                </div>
+                <div className="settings-icon">
+                  <div className="icon-icon">
+                    <IoLogoCss3 />
                   </div>
-                  <p className='icon-title'> css </p>
-              </div>
-          </IconContext.Provider>
-      </div>
-    </div>
-    <div className="settings-body">
-      <p>
-        Features: <br />
-        - current time display <br />
-        - message functionality <br />
-        - draggable view windows (desktop only)
-      </p>
-    </div>
-    </div>
-    )
-    } else if (content === 'styles') {
+                  <p className="icon-title"> css </p>
+                </div>
+              </IconContext.Provider>
+            </div>
+          </div>
+          <div className="settings-body">
+            <p>
+              Features: <br />
+              - current time display <br />
+              - message functionality <br />- draggable view windows (desktop
+              only)
+            </p>
+          </div>
+        </div>
+      );
+    } else if (content === "styles") {
       return (
         <div
-        className="settings-contents"
-        onMouseDown={(e) => e.stopPropagation()}
-      >
-        <h1 className='settings-title'>styles</h1>
-        <div className="settings-body">
-          <p>
-            Features to be added: <br />
-            - change wallpaper <br />
-            - modify font/icon sizes <br />
-            - change to 24hr clock 
-          </p>
-        </div>
+          className="settings-contents"
+          onMouseDown={(e) => e.stopPropagation()}
+        >
+          <h1 className="settings-title">styles</h1>
+          <div className="settings-body">
+            <p>
+              Features to be added: <br />
+              - change wallpaper <br />
+              - modify font/icon sizes <br />- change to 24hr clock
+            </p>
+          </div>
         </div>
       );
     }
-  
+
     return (
       <>
         <div className="modal-background">
@@ -150,10 +155,18 @@ function SettingsWindow(props) {
                 </IconContext.Provider>
               </div>
             </div>
-            <div className='settings-selector'>
-              <input type='button' value='site info' onClick={() => changeContent('info')} />
-            
-              <input type='button' value='styles' onClick={() => changeContent('styles')} /> 
+            <div className="settings-selector">
+              <input
+                type="button"
+                value="site info"
+                onClick={() => changeContent("info")}
+              />
+
+              <input
+                type="button"
+                value="styles"
+                onClick={() => changeContent("styles")}
+              />
             </div>
           </div>
           <div className="preferences-selector">
@@ -171,8 +184,9 @@ function SettingsWindow(props) {
           </div>
           {displayContents(content)}
         </div>
-    </>
-  );
-}}
+      </>
+    );
+  };
+}
 
 export default SettingsWindow;

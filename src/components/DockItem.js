@@ -17,7 +17,7 @@ function DockItem(props) {
   const [openModal, setOpenModal] = useState(false);
   const [bounce, setBounce] = useState(false);
   const Toggle = () => {
-    if(!openModal){
+    if (!openModal) {
       setBounce(true);
     }
     setOpenModal(!openModal);
@@ -54,7 +54,10 @@ function DockItem(props) {
     <>
       {openModal && Window()}
       <div className="dock-item" onClick={Toggle}>
-        <div className={bounce? "dock-icon-bounce" : "dock-icon"} onAnimationEnd={() => setBounce(false)}>
+        <div
+          className={bounce ? "dock-icon-bounce" : "dock-icon"}
+          onAnimationEnd={() => setBounce(false)}
+        >
           <IconContext.Provider value={{ size: "2.5em" }}>
             {Icon()}
           </IconContext.Provider>
