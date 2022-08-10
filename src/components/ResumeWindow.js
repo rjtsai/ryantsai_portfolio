@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./ResumeWindow.css";
 import { IconContext } from "react-icons";
 import { AiFillCloseCircle, AiOutlineCloseCircle } from "react-icons/ai";
+import { FiDownload } from 'react-icons/fi';
 import { Document, Page } from "react-pdf";
 import Resume from "../GalleryImages/resume.jpg";
 
@@ -59,6 +60,10 @@ function ResumeWindow(props) {
             className="resume-content"
             onMouseDown={(e) => e.stopPropagation()}
           >
+            <a className='resume-download' href={require('../data/Resume.pdf')} download='RyanTsai_Resume'>
+              Download PDF
+              <FiDownload />
+            </a>
             <img src={Resume} />
           </div>
         </div>

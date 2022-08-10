@@ -7,7 +7,7 @@
     z-index: 10;
 }
 
-.preferences-modal{
+.settings-modal{
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -17,7 +17,7 @@
     border-radius: 20px;
 }
 
-.preferences-handlebar {
+.settings-handlebar {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -28,20 +28,20 @@
     opacity: 0.8;
 }
 
-.preferences-close {
+.settings-close {
     display: flex;
     align-content: center;
     bottom: auto;
 }
 
-.preferences-selector {
+.settings-selector {
     display: flex;
     height: 10%;
     margin-top: 1%;
     justify-content: center;
 }
 
-.preferences-contents {
+.settings-contents {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -50,13 +50,13 @@
     padding: 2%;
 }
 
-.preferences-header {
+.settings-header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.preferences-title {
+.settings-title {
     justify-content: center;
     user-select: none;
 }
@@ -67,7 +67,7 @@
     
 }
 
-.preferences-icon {
+.settings-icon {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -89,18 +89,18 @@
 
 }
 
-.preferences-body {
+.settings-body {
     display: flex;
     padding: 2%;
 }
 
 @media (max-width: 1000px) {
-    .preferences-modal {
+    .settings-modal {
         width: 90%;
         height: 50%;
     }
 
-    .preferences-close {
+    .settings-close {
         margin-left: 4%;
     }
     

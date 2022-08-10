@@ -11,3 +11,10 @@
     margin-left: 10vw;
 }
 
+@media (max-width: 600px) {
+    .dock-container {
+        width: 94%;
+        margin-left: 3vw;
+    }
+}
+

@@ -11,11 +11,17 @@ import Modal from "./Modal";
 import AboutWindow from "./AboutWindow";
 import ResumeWindow from "./ResumeWindow";
 import MessageWindow from "./MessageWindow";
-import PreferencesWindow from "./PreferencesWindow";
+import SettingsWindow from "./SettingsWindow";
 
 function DockItem(props) {
   const [openModal, setOpenModal] = useState(false);
-  const Toggle = () => setOpenModal(!openModal);
+  const [bounce, setBounce] = useState(false);
+  const Toggle = () => {
+    if(!openModal){
+      setBounce(true);
+    }
+    setOpenModal(!openModal);
+  };
   const Icon = () => {
     if (props.type === "profile") {
       return <CgProfile />;
@@ -23,7 +29,7 @@ function DockItem(props) {
       return <GrDocumentPdf />;
     } else if (props.type === "message") {
       return <TiMessages />;
-    } else if (props.type === "preferences") {
+    } else if (props.type === "settings") {
       return <FiSettings />;
     } else {
       return <FaBeer />;
@@ -37,8 +43,8 @@ function DockItem(props) {
       return <ResumeWindow clickEvent={Toggle} />;
     } else if (props.type === "message") {
       return <MessageWindow clickEvent={Toggle} />;
-    } else if (props.type === "preferences") {
-      return <PreferencesWindow clickEvent={Toggle} />;
+    } else if (props.type === "settings") {
+      return <SettingsWindow clickEvent={Toggle} />;
     } else {
       console.warn("default modal activated");
       return <Modal id={props.id} clickEvent={Toggle} title={props.type} />;
@@ -48,7 +54,7 @@ function DockItem(props) {
     <>
       {openModal && Window()}
       <div className="dock-item" onClick={Toggle}>
-        <div className="dock-icon">
+        <div className={bounce? "dock-icon-bounce" : "dock-icon"} onAnimationEnd={() => setBounce(false)}>
           <IconContext.Provider value={{ size: "2.5em" }}>
             {Icon()}
           </IconContext.Provider>

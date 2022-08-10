@@ -9,7 +9,7 @@ function Dock() {
         <DockItem type="profile" />
         <DockItem type="message" />
         <DockItem type="resume" />
-        <DockItem type="preferences" />
+        <DockItem type="settings" />
       </div>
     </>
   );

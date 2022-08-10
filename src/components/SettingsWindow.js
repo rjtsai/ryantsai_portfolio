@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import './PreferencesWindow.css';
+import './SettingsWindow.css';
 import { IconContext } from 'react-icons';
 import { AiFillCloseCircle, AiOutlineCloseCircle } from 'react-icons/ai';
 import { IoLogoAmplify, IoLogoGithub, IoLogoReact,  IoLogoHtml5, IoLogoCss3, } from 'react-icons/io5';
 import { ImGit } from 'react-icons/im';
 
-function PreferencesWindow(props) {
+function SettingsWindow(props) {
     const [hover, setHover] = useState(false);
     const [dX, moveX] = useState(0);
     const [dY, moveY] = useState(0);
@@ -40,38 +40,38 @@ function PreferencesWindow(props) {
       if (content === 'info') {
       return (
         <div
-              className="preferences-contents"
+              className="settings-contents"
               onMouseDown={(e) => e.stopPropagation()}
             >
-      <div className="preferences-header">
-      <h1 className='preferences-title'>about this website</h1>
+      <div className="settings-header">
+      <h1 className='settings-title'>about this website</h1>
       <div className='icon-wrapper'>
           <IconContext.Provider value={{size: '2em'}}>
-              <div className='preferences-icon'>
+              <div className='settings-icon'>
                   <div className='icon-icon'>
                   <IoLogoAmplify />
                   </div>
                   <p className='icon-title'> aws amplify </p>
               </div>
-              <div className='preferences-icon'>
+              <div className='settings-icon'>
                   <div className='icon-icon'>
                   <ImGit />
                   </div>
                   <p className='icon-title'> git </p>
               </div>
-              <div className='preferences-icon'>
+              <div className='settings-icon'>
                   <div className='icon-icon'>
                   <IoLogoReact />
                   </div>
                   <p className='icon-title'> react.js </p>
               </div>
-              <div className='preferences-icon'>
+              <div className='settings-icon'>
                   <div className='icon-icon'>
                   <IoLogoHtml5 />
                   </div>
                   <p className='icon-title'> html5 </p>
               </div>
-              <div className='preferences-icon'>
+              <div className='settings-icon'>
                   <div className='icon-icon'>
                   <IoLogoCss3 />
                   </div>
@@ -80,7 +80,7 @@ function PreferencesWindow(props) {
           </IconContext.Provider>
       </div>
     </div>
-    <div className="preferences-body">
+    <div className="settings-body">
       <p>
         Features: <br />
         - current time display <br />
@@ -93,11 +93,11 @@ function PreferencesWindow(props) {
     } else if (content === 'styles') {
       return (
         <div
-        className="preferences-contents"
+        className="settings-contents"
         onMouseDown={(e) => e.stopPropagation()}
       >
-        <h1 className='preferences-title'>styles</h1>
-        <div className="preferences-body">
+        <h1 className='settings-title'>styles</h1>
+        <div className="settings-body">
           <p>
             Features to be added: <br />
             - change wallpaper <br />
@@ -114,15 +114,15 @@ function PreferencesWindow(props) {
       <>
         <div className="modal-background">
           <div
-            className="preferences-modal"
+            className="settings-modal"
             style={styles}
             onMouseDown={_dragStart}
             onMouseMove={_dragging}
             onMouseUp={_dragEnd}
           >
-            <div className="preferences-handlebar">
+            <div className="settings-handlebar">
               <div
-                className="preferences-close"
+                className="settings-close"
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
                 onClick={props.clickEvent}
@@ -132,7 +132,7 @@ function PreferencesWindow(props) {
                 </IconContext.Provider>
               </div>
             </div>
-            <div className='preferences-selector'>
+            <div className='settings-selector'>
               <input type='button' value='site info' onClick={() => changeContent('info')} />
             
               <input type='button' value='styles' onClick={() => changeContent('styles')} /> 
@@ -144,4 +144,4 @@ function PreferencesWindow(props) {
     );
 }
 
-export default PreferencesWindow;
+export default SettingsWindow;
