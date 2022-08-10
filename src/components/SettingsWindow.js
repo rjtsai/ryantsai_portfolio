@@ -38,25 +38,6 @@ function SettingsWindow(props) {
     }
   };
 
-  const _dragStart = (e) => {
-    moveX(e.screenX - e.currentTarget.getBoundingClientRect().left);
-    moveY(e.screenY - e.currentTarget.getBoundingClientRect().top);
-    setDragging(true);
-  };
-
-  const _dragEnd = () => {
-    setDragging(false);
-  };
-
-  const _dragging = (e) => {
-    if (dragging) {
-      var left = e.screenX - dX;
-      var top = e.screenY - dY;
-
-      setStyles({ left: left, top: top });
-    }
-  };
-
   const changeContent = (type) => {
     setContent(type);
   };
