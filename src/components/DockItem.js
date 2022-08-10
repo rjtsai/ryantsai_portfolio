@@ -6,7 +6,7 @@ import { FaBeer } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { GrDocumentPdf, GrGallery } from "react-icons/gr";
 import { TiMessages } from "react-icons/ti";
-import { FiSettings } from 'react-icons/fi';
+import { FiSettings } from "react-icons/fi";
 import Modal from "./Modal";
 import AboutWindow from "./AboutWindow";
 import ResumeWindow from "./ResumeWindow";

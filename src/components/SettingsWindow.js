@@ -32,12 +32,31 @@ function SettingsWindow(props) {
       }
     };
 
-    const changeContent = (type) => {
-        setContent(type);
-    }
+  const _dragStart = (e) => {
+    moveX(e.screenX - e.currentTarget.getBoundingClientRect().left);
+    moveY(e.screenY - e.currentTarget.getBoundingClientRect().top);
+    setDragging(true);
+  };
 
-    const displayContents = () => {
-      if (content === 'info') {
+  const _dragEnd = () => {
+    setDragging(false);
+  };
+
+  const _dragging = (e) => {
+    if (dragging) {
+      var left = e.screenX - dX;
+      var top = e.screenY - dY;
+
+      setStyles({ left: left, top: top });
+    }
+  };
+
+  const changeContent = (type) => {
+    setContent(type);
+  };
+
+  const displayContents = () => {
+    if (content === "info") {
       return (
         <div
               className="settings-contents"
@@ -106,8 +125,7 @@ function SettingsWindow(props) {
           </p>
         </div>
         </div>
-      )
-    }
+      );
     }
   
     return (
@@ -137,11 +155,24 @@ function SettingsWindow(props) {
             
               <input type='button' value='styles' onClick={() => changeContent('styles')} /> 
             </div>
-              {displayContents(content)}
           </div>
+          <div className="preferences-selector">
+            <input
+              type="button"
+              value="site info"
+              onClick={() => changeContent("info")}
+            />
+
+            <input
+              type="button"
+              value="styles"
+              onClick={() => changeContent("styles")}
+            />
+          </div>
+          {displayContents(content)}
         </div>
-      </>
-    );
-}
+    </>
+  );
+}}
 
 export default SettingsWindow;
