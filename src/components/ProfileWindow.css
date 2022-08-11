@@ -64,8 +64,8 @@
 .profile-pic-wrap {
     display: flex;
     justify-content: center;
-    min-width: 180px;
-    min-height: 180px;
+    min-width: 230px;
+    min-height: 230px;
     border-radius: 50%;
     background-size: 200%;
     background-position: center;
