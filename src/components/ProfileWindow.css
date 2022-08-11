@@ -1,0 +1,132 @@
+.modal-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.profile-modal{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: white;
+    width: calc(15% + 60vw);
+    border-radius: 20px;
+}
+
+.profile-handlebar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1.5px solid #cacaca;
+    padding: 0.7%;
+    border-radius: 10px 10px 0 0;
+    background: #fffbf5;
+    opacity: 0.8;
+}
+
+.profile-close {
+    display: flex;
+    align-content: center;
+    bottom: auto;
+}
+
+.profile-contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+    overflow-y: scroll;
+    margin: 2px;
+    padding: 1%;
+}
+
+.profile-left {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+    margin: 2px;
+   
+}
+
+.profile-right {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 2px;
+
+}
+
+.profile-pic-wrap {
+    display: flex;
+    justify-content: center;
+    min-width: 180px;
+    min-height: 180px;
+    border-radius: 50%;
+    background-size: 200%;
+    background-position: center;
+    background-image: url('../GalleryImages/profile.jpg');
+   
+}
+
+.profile-headers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 2;
+    width: 70%;
+    margin: 2%;
+
+}
+
+.profile-headers > h2 {
+}
+
+.profile-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2% 0 2%;
+}
+
+.profile-body > h2 {
+}
+
+.profile-body > p {
+    padding: 0 5% 0 5%;
+}
+
+@media (max-width: 1000px) {
+    .profile-modal {
+        width: 90%;
+        height: 80%;
+    }
+
+    .profile-close {
+        margin-left: 4%;
+    }
+
+    .profile-contents {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .profile-left {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    .profile-right {
+        width: 100%;
+    }
+
+    .profile-body > p {
+        padding: 0;
+    }
+    
+}
+

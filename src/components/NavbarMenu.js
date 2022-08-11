@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SettingsWindow from "./SettingsWindow";
-import AboutWindow from "./AboutWindow";
+import ProfileWindow from "./ProfileWindow";
 import FolderWindow from "./FolderWindow";
 import MessageWindow from "./MessageWindow";
 import ResumeWindow from "./ResumeWindow";
@@ -17,7 +17,7 @@ function NavbarMenu(props) {
 
   const activateWindow = () => {
     if (window.type === "profile") {
-      return <AboutWindow clickEvent={toggleWindow} />;
+      return <ProfileWindow clickEvent={toggleWindow} />;
     } else if (window.type === "projects") {
       return <FolderWindow clickEvent={toggleWindow} />;
     } else if (window.type === "message") {

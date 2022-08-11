@@ -8,7 +8,7 @@ import { GrDocumentPdf, GrGallery } from "react-icons/gr";
 import { TiMessages } from "react-icons/ti";
 import { FiSettings } from "react-icons/fi";
 import Modal from "./Modal";
-import AboutWindow from "./AboutWindow";
+import ProfileWindow from "./ProfileWindow";
 import ResumeWindow from "./ResumeWindow";
 import MessageWindow from "./MessageWindow";
 import SettingsWindow from "./SettingsWindow";
@@ -38,7 +38,7 @@ function DockItem(props) {
 
   const Window = () => {
     if (props.type === "profile") {
-      return <AboutWindow clickEvent={Toggle} />;
+      return <ProfileWindow clickEvent={Toggle} />;
     } else if (props.type == "resume") {
       return <ResumeWindow clickEvent={Toggle} />;
     } else if (props.type === "message") {

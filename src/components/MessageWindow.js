@@ -4,7 +4,7 @@ import { IconContext } from "react-icons";
 import { AiFillCloseCircle, AiOutlineCloseCircle } from "react-icons/ai";
 import { EmailForm } from "./EmailForm";
 
-function AboutWindow(props) {
+function ProfileWindow(props) {
   const [hover, setHover] = useState(false);
   const [dX, moveX] = useState(0);
   const [dY, moveY] = useState(0);
@@ -61,4 +61,4 @@ function AboutWindow(props) {
   );
 }
 
-export default AboutWindow;
+export default ProfileWindow;

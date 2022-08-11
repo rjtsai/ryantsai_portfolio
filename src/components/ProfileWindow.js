@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./AboutWindow.css";
+import "./ProfileWindow.css";
 import { IconContext } from "react-icons";
 import { AiFillCloseCircle, AiOutlineCloseCircle } from "react-icons/ai";
 
-function AboutWindow(props) {
+function ProfileWindow(props) {
   const [hover, setHover] = useState(false);
   const [dX, moveX] = useState(0);
   const [dY, moveY] = useState(0);
@@ -35,15 +35,15 @@ function AboutWindow(props) {
     <>
       <div className="modal-background">
         <div
-          className="about-modal"
+          className="profile-modal"
           style={styles}
           onMouseDown={_dragStart}
           onMouseMove={_dragging}
           onMouseUp={_dragEnd}
         >
-          <div className="about-handlebar">
+          <div className="profile-handlebar">
             <div
-              className="about-close"
+              className="profile-close"
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
               onClick={props.clickEvent}
@@ -54,21 +54,32 @@ function AboutWindow(props) {
             </div>
           </div>
           <div
-            className="about-contents"
+            className="profile-contents"
             onMouseDown={(e) => e.stopPropagation()}
           >
-            <div className="about-title">
-              <h1>Welcome to my site!</h1>
+            <div className='profile-left'>
+              <div className='profile-pic-wrap' />
+              <div className='profile-headers'>
+                <h2 className='profile-name'>ryan tsai</h2>
+                software engineer <br />
+                cal poly slo co '23
+              </div>
             </div>
-            <div className="about-body">
-              <p>
-                I'm in the process of rebuilding this website, so excuse the
-                mess. <br />
-                <br />
-                Feel free to poke around! <br />
-                <br />
-              </p>
+            <div className='profile-right'>
+              <div className='profile-body'>
+                <h2>welcome to my page!</h2>
+                <p>
+                I chose software engineering in hopes of joining two of my passions— 
+                bringing people together and staring at digital screens. 
+                In my journey thus far I have broadened my experience and worldview, 
+                brought engineering students of all backgrounds together, and (important!) 
+                learned to code. 
+                Now, I am looking to further utilize the skills that I have learned to make 
+                a positive impact through the many applications of software engineering.
+                </p>
+              </div>
             </div>
+            
           </div>
         </div>
       </div>
@@ -76,4 +87,4 @@ function AboutWindow(props) {
   );
 }
 
-export default AboutWindow;
+export default ProfileWindow;
