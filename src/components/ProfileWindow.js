@@ -57,29 +57,29 @@ function ProfileWindow(props) {
             className="profile-contents"
             onMouseDown={(e) => e.stopPropagation()}
           >
-            <div className='profile-left'>
-              <div className='profile-pic-wrap' />
-              <div className='profile-headers'>
-                <h2 className='profile-name'>ryan tsai</h2>
+            <div className="profile-left">
+              <div className="profile-pic-wrap" />
+              <div className="profile-headers">
+                <h2 className="profile-name">ryan tsai</h2>
                 software engineer <br />
                 cal poly slo co '23
               </div>
             </div>
-            <div className='profile-right'>
-              <div className='profile-body'>
+            <div className="profile-right">
+              <div className="profile-body">
                 <h2>welcome to my page!</h2>
                 <p>
-                I chose software engineering in hopes of joining two of my passions— 
-                bringing people together and staring at digital screens. 
-                In my journey thus far I have broadened my experience and worldview, 
-                brought engineering students of all backgrounds together, and (important!) 
-                learned to code. 
-                Now, I am looking to further utilize the skills that I have learned to make 
-                a positive impact through the many applications of software engineering.
+                  I chose software engineering in hopes of joining two of my
+                  passions— bringing people together and staring at digital
+                  screens. In my journey thus far I have broadened my experience
+                  and worldview, brought engineering students of all backgrounds
+                  together, and (important!) learned to code. Now, I am looking
+                  to further utilize the skills that I have learned to make a
+                  positive impact through the many applications of software
+                  engineering.
                 </p>
               </div>
             </div>
-            
           </div>
         </div>
       </div>
