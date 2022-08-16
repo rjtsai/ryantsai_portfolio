@@ -44,7 +44,7 @@ function NavbarMenu(props) {
             profile
           </li>
           <li className="dropdown-item" onClick={() => toggleWindow("")}>
-            projects
+            projects ⚠︎
           </li>
           <li className="dropdown-item" onClick={() => toggleWindow("message")}>
             message

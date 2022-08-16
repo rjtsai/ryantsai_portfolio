@@ -113,7 +113,7 @@ function Navbar() {
             </div>
             <div className="navbar-timestamp">
               {currDay} &nbsp;
-              <br class="mobile-break" />
+              <br className="mobile-break" />
               {currTime}
             </div>
           </div>
