@@ -14,6 +14,7 @@
     background-color: white;
     width: calc(15% + 60vw);
     border-radius: 20px;
+    top: 10%;
 }
 
 .profile-handlebar {
