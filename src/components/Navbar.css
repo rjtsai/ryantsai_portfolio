@@ -76,9 +76,19 @@
   border-bottom: 1px solid grey;
 }
 
+.dropdown-item[label]::after {
+  content: attr(label);
+  margin-left: 1%;
+  transform: scale(0);
+}
+
+.dropdown-item[label]:hover::after {
+  transform: scale(1);
+}
+
 .dropdown-item:hover {
-  background-color: grey;
-  opacity: 0.7;
+  background-color: lightgrey;
+  color: black;
 }
 
 .navbar-timestamp {

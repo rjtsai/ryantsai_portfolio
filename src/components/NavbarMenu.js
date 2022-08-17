@@ -9,6 +9,7 @@ function NavbarMenu(props) {
   const [window, setWindow] = useState({ open: false, type: "" });
 
   const toggleWindow = (type) => {
+    console.warn("togglewindow");
     setWindow({ open: !window.open, type: type });
     if (window.open) {
       props.clickEvent();
@@ -43,8 +44,8 @@ function NavbarMenu(props) {
           <li className="dropdown-item" onClick={() => toggleWindow("profile")}>
             profile
           </li>
-          <li className="dropdown-item" onClick={() => toggleWindow("")}>
-            projects ⚠︎
+          <li className="dropdown-item" label='⚠︎ link is broken atm' onClick={() => toggleWindow("")}>
+            projects
           </li>
           <li className="dropdown-item" onClick={() => toggleWindow("message")}>
             message
