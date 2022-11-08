@@ -1,4 +1,4 @@
-name: Prettify
+name: Prettier
 
 # This action works on pull requests and pushes to main
 on:
