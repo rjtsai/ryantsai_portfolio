@@ -96,18 +96,19 @@ function SettingsWindow(props) {
           </div>
         </div>
       );
-    } else if (content === "styles") {
+    } else if (content === "backlog") {
       return (
         <div
           className="settings-contents"
           onMouseDown={(e) => e.stopPropagation()}
         >
-          <h1 className="settings-title">styles</h1>
+          <h1 className="settings-title">backlog</h1>
           <div className="settings-body">
             <p>
-              Features to be added: <br />
-              - change wallpaper <br />
-              - modify font/icon sizes <br />- change to 24hr clock
+              - update projects / clean up ui+stylesheet <br />
+              - customizable wallpaper <br />
+              - customizable font/icon sizes <br />
+              - customizable clock 
             </p>
           </div>
         </div>
@@ -145,8 +146,8 @@ function SettingsWindow(props) {
             />
             <input
               type="button"
-              value="styles"
-              onClick={() => changeContent("styles")}
+              value="backlog"
+              onClick={() => changeContent("backlog")}
             />
           </div>
           {displayContents(content)}
